@@ -1,24 +1,49 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./index.scss";
+import S01 from "./components/s01";
+import Section02 from "./components/Section02";
+import Section03 from "./components/Section03";
+import Section04 from "./components/Section04";
+import Section05 from "./components/Section05";
+import Section06 from "./components/Section06";
+import Section07 from "./components/Section7";
+import Section08 from "./components/Section08";
+import Section09 from "./components/Section09";
+import Footer from "./components/Footer";
+import Menu from "./components/Menu";
+import MenuFlotante from "./components/MenuFlotante";
+import styled from "@emotion/styled";
+
+
+
+const Bigc = styled.div`
+    background-image: url(img/Onda2.png);
+    background-position:top center;
+    background-size:100% auto;
+    background-repeat:no-repeat;
+    width:100%;
+    psoition:relative;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main-container" id={"scroll"}>
+        <Menu/>
+
+        <S01/>
+        <MenuFlotante/>
+        <Section02/>
+        <Section03/>
+        <Bigc>
+        <Section04/>
+        <Section05/>
+        <Section06/>
+        <Section07/>
+        </Bigc>
+        <Section08/>
+        <Section09/>
+
+        <Footer/>
     </div>
   );
 }

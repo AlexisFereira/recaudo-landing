@@ -1,0 +1,36 @@
+import React from "react";
+import styled from "@emotion/styled";
+import barra from "./../../img/g01/barra.png";
+import direccion  from "./../../img/g01/direccion.png";
+import plantilla from "./../../img/g01/plantilla.png";
+
+let GraficoS = styled.div`   
+   .barra,.direccion,.plantilla{
+        width:100%;
+        position:relative;
+        
+        .imgr{
+            width:100%;
+            height:auto;
+            display:block;
+        }
+   }
+`;
+
+function Grafico() {
+    return (
+        <GraficoS className={"wc"}>
+            <div className="barra">
+                <img src={barra} alt="" className={"imgr"}/>
+            </div>
+            <div className="direccion">
+                <img src={direccion} alt="" className={"imgr"}/>
+            </div>
+            <div className="plantilla">
+                <img src={plantilla} alt="" className={"imgr"}/>
+            </div>
+        </GraficoS>
+    )
+};
+
+export default Grafico;
