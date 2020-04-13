@@ -9,8 +9,8 @@ import {Colors} from "../Btn";
 function Section03() {
     return (
         <div className={"wc"}>
-            <Flex className={"container px-md-0 pt-4"}>
-                <div className="col-12 col-md-6  px-md-0 px-0">
+            <Flex className={"container px-0 pt-4"}>
+                <div className="col-12 col-md-6 px-0">
                     <div className={"m460 mx-0 mx-md-auto wc pb-4 pb-md-0"}>
                         <TitleDesc
                             colorT={Colors.naranja}
