@@ -3,10 +3,11 @@ import Flex from "../Flex";
 import TitleDesc from "../titleDesc";
 import ListItem from "../ListItem";
 import Grafico from "./grafico";
+import Section03 from "../Section03";
 
 function Section02() {
     return (
-        <div className={"wc position-relative"} name={"uno"}>
+        <div className={"wc position-relative"}>
             <div className="container py-4 py-lg-5">
                 <TitleDesc
                     text={"Principales características "}
@@ -20,6 +21,7 @@ function Section02() {
                 <div className="col-12 col-md-6 px-0">
                     <div className="m460 mx-0 mx-md-auto pb-4 pb-md-0">
                         <TitleDesc
+                            className={"pb-3"}
                             direction={"left"}
                             text={"Personalización del portal de recaudo"}
                             description={"Entendemos que la comunicación con sus clientes es única, por esto nuestra portal de recaudo puede ser personalizado al mas fino detalle, los siguientes son los principales aspectos que puede personalizar en su portal de recaudo."}
@@ -40,6 +42,10 @@ function Section02() {
                     </div>
                 </div>
             </Flex>
+
+            <div className="container">
+                <Section03/>
+            </div>
         </div>
     )
 };

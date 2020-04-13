@@ -3,6 +3,8 @@ import Flex from "../Flex";
 import TitleDesc from "../titleDesc";
 import ListItem from "../ListItem";
 import Grafico from "./grafico";
+import {Element} from "react-scroll";
+import {Colors} from "../Btn";
 
 function Section03() {
     return (
@@ -11,6 +13,8 @@ function Section03() {
                 <div className="col-12 col-md-6  px-md-0 px-0">
                     <div className={"m460 mx-0 mx-md-auto wc pb-4 pb-md-0"}>
                         <TitleDesc
+                            colorT={Colors.naranja}
+                            className={"pb-3"}
                             direction={"left"}
                             text={"Dashboard"}
                             description={"Nuestro panel de administración permite de manera simplificada que usted y su equipo de trabajo realicen las siguientes acciones:"}
@@ -44,6 +48,7 @@ function Section03() {
                     <Grafico/>
                 </div>
             </Flex>
+
         </div>
     )
 };

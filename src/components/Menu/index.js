@@ -53,6 +53,16 @@ function Menu() {
                                 <small>Market Place, Vendedores,distribuya pagos entre clientes, empleados y
                                     proveedores.</small>
                             </a>
+
+                            <a href="/recaudo"><p>ePayco <span
+                                className="orange">Recaudo</span></p>
+                                <small>Generación de cobros recurrentes al instante.</small>
+                            </a>
+
+                            <a href="/paypal"><p>ePayco <span
+                                className="orange">PayPal</span></p>
+                                <small>Pagos a través de la solución mas conocida en el mundo.</small>
+                            </a>
                         </div>
                     </li>
                     <li><span className="link"> Herramientas <i className="material-icons">arrow_drop_down</i>  </span>

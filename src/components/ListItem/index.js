@@ -2,25 +2,25 @@ import React from "react";
 import Flex from "../Flex";
 import styled from "@emotion/styled";
 import check from "./../../img/Check.png"
+import {Colors} from "../Btn";
 
 
 const Numerito = styled.div`
-        width:30px;
-        height:30px;
+        width:22px;
+        height:22px;
         border-radius:50%;
-        line-height:30px;
+        line-height:22px;
         color:white;
+        font-size:14px;
         text-align:center;
-        background:#F1A34F;
+        background:${Colors.azul};
 `;
 
 function ListItem({number,text,...props}) {
     return (
         <Flex
             jc={"flex-start"}
-            alg={"flex-start"}
             className={"mb-3"}
-
         >
             <Flex flex={"0 0 30px"}>
                 {number ?

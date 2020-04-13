@@ -5,14 +5,14 @@ import Flex from "../Flex";
 import Grafico from "./grafico";
 function Section08() {
     return (
-        <div className={"wc"}>
-            <Flex className={"container px-lg-0 py-4 py-lg-5"}>
+         <Flex className={"wc pt-4"}>
                 <div className="col-12 col-md-6 pl-md-0 order-2 order-md-0 px-0">
                     <Grafico/>
                 </div>
                 <div className="col-12 col-md-6 px-md-0 px-0">
                     <div className="wc m460 mx-0 mx-md-auto pb-4 pb-md-0">
                         <TitleDesc
+                            className={"pb-3"}
                             direction={"left"}
                             text={"Proceso de pago"}
                             description={"Al configurar y cargar en ePayco las facturas pendientes de pago, el usuario ingresa en la URL del proyecto y realiza el siguiente proceso para completar el pago:"}
@@ -44,7 +44,6 @@ function Section08() {
                 </div>
 
             </Flex>
-        </div>
     )
 };
 

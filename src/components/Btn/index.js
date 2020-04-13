@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 
 export const Colors = {
     naranja:"#FC5A08",
-    azul: "#030F51;",
+    azul: "#030F51",
 };
 
 const Btnt = styled.div`

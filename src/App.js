@@ -13,6 +13,7 @@ import Footer from "./components/Footer";
 import Menu from "./components/Menu";
 import MenuFlotante from "./components/MenuFlotante";
 import styled from "@emotion/styled";
+import {Element} from "react-scroll";
 
 
 
@@ -31,16 +32,20 @@ function App() {
         <Menu/>
 
         <S01/>
+        <div className={"wc"} name={"uno"}></div>
         <MenuFlotante/>
         <Section02/>
-        <Section03/>
+
         <Bigc>
+        <Element name={"archivo"}/>
         <Section04/>
-        <Section05/>
-        <Section06/>
+
+
+        <Element name={"formulario"}/>
         <Section07/>
         </Bigc>
-        <Section08/>
+
+        <div className={"wc"} name={"precios"}/>
         <Section09/>
 
         <Footer/>
