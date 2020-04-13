@@ -9,13 +9,14 @@ import {Colors} from "../Btn";
 function Section03() {
     return (
         <div className={"wc"}>
-            <Flex className={"container px-md-0 py-4 py-md-5"}>
+            <Flex className={"container px-md-0 pt-4"}>
                 <div className="col-12 col-md-6  px-md-0 px-0">
                     <div className={"m460 mx-0 mx-md-auto wc pb-4 pb-md-0"}>
                         <TitleDesc
                             colorT={Colors.naranja}
                             className={"pb-3"}
                             direction={"left"}
+                            sizeT={"20px"}
                             text={"Dashboard"}
                             description={"Nuestro panel de administración permite de manera simplificada que usted y su equipo de trabajo realicen las siguientes acciones:"}
                         />

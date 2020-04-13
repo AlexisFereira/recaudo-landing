@@ -38,7 +38,7 @@ let Contenedor = styled(Flex)`
     background:transparent url(${curva}) no-repeat center;
     background-size: cover;
     padding-top:50px;
-    min-height: calc(100vh - 55px);
+    min-height: calc(100vh - 65px);
    
   
     

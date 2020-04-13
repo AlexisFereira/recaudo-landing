@@ -18,7 +18,7 @@ function Section6() {
                         className={"pb-3"}
                         colorT={Colors.naranja}
                         text={"Proceso de pago"}
-                        colorT={Colors.naranja}
+                        sizeT={"20px"}
                         description={"Al configurar y cargar en ePayco las facturas pendientes de pago, el usuario ingresa en la URL del proyecto y realiza el siguiente proceso para completar el pago:"}
                     />
                     <ListItem

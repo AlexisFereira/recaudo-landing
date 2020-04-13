@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import epa from "../../img/epayco-b.png";
 import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import Flex from "../Flex";
@@ -17,6 +17,10 @@ function MenuFlotante() {
     };
 
 
+
+    useEffect(()=>{},[])
+
+
     return (
         <div className="menuFlotante f01 jcfs px-3 py-2 d-none d-md-flex mb-3">
             <Flex flex={"0 0 150px"} jc={"flex-start"} className={"py-1"}>
@@ -30,8 +34,8 @@ function MenuFlotante() {
             <div className="enlaces f01 jcfe">
 
                 <button  onClick={()=>  scrollTo("uno")} id="btntwo" className="go07">Características</button>
-                <button  onClick={()=> scrollTo("archivo",-80) } id="archivo" >Archivos de recaudo</button>
-                <button  onClick={()=> scrollTo('formulario', -90) } id="btnFour">Formulario de recaudo</button>
+                <button  onClick={()=> scrollTo("archivo",-60) } id="archivo" >Archivos de recaudo</button>
+                <button  onClick={()=> scrollTo('formulario', -60) } id="btnFour">Formulario de recaudo</button>
                 <button  onClick={()=> scrollTo('precios') } id="btnFour">Comparar caracteristicas</button>
                 <button  onClick={()=>  scrollTo('last')} id="btnfive" className="main">Crear proyecto</button>
             </div>

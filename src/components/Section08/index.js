@@ -3,6 +3,7 @@ import TitleDesc from "../titleDesc";
 import ListItem from "../ListItem";
 import Flex from "../Flex";
 import Grafico from "./grafico";
+import {Colors} from "../Btn";
 function Section08() {
     return (
          <Flex className={"wc pt-4"}>
@@ -12,6 +13,8 @@ function Section08() {
                 <div className="col-12 col-md-6 px-md-0 px-0">
                     <div className="wc m460 mx-0 mx-md-auto pb-4 pb-md-0">
                         <TitleDesc
+                            colorT={Colors.naranja}
+                            sizeT={"20px"}
                             className={"pb-3"}
                             direction={"left"}
                             text={"Proceso de pago"}
