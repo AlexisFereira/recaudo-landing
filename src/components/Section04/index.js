@@ -14,7 +14,7 @@ const Container = styled.div`
 
 function Section04() {
     return (
-        <Container className={"py-5"} id={"archivo"}>
+        <Container className={"py-5"} id={"Archivo"}>
             <div className="col-12 col-md-8 col-lg-7 mx-auto pb-4">
                 <TitleDesc
                     sizeT={"28px"}

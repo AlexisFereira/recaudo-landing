@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import "./index.scss";
 import S01 from "./components/s01";
 import Section02 from "./components/Section02";
@@ -14,6 +14,7 @@ import Menu from "./components/Menu";
 import MenuFlotante from "./components/MenuFlotante";
 import styled from "@emotion/styled";
 import {Element} from "react-scroll";
+import PricesTable from "./components/Prices";
 
 
 
@@ -27,6 +28,9 @@ const Bigc = styled.div`
 `;
 
 function App() {
+
+
+
   return (
     <div className="main-container" id={"scroll"}>
         <Menu/>
@@ -44,7 +48,7 @@ function App() {
         <Element name={"formulario"}/>
         <Section07/>
         </Bigc>
-
+        <PricesTable/>
         <div className={"wc"} name={"precios"}/>
         <Section09/>
 

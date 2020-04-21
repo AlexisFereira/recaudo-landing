@@ -35,7 +35,7 @@ const Container = styled.div`
 
 function Section09() {
     return (
-        <Container className={"wc"} name="last">
+        <Container className={"wc"} name="last" id={"creaCuenta"}>
                 <Flex className={"container px-lg-0 py-4 py-lg-5 px-sm-0"}>
                     <Flex flex={"0 0 180px"} className={"man"}>
                         <img src={hombre} alt="" width={"100%"} height={"auto"} className={"d-flex"}/>
