@@ -7,8 +7,8 @@ import Section08 from "../Section08";
 
 function Section07() {
     return (
-        <div className={"wc"} id={"formulario"}>
-            <Flex className={"container px-md-0 py-4 py-lg-5"}>
+        <div className={"wc"} id={"formulario"} name={"formulario"} style={{paddingTop:"100px"}}>
+            <Flex className={"container px-md-0"}>
                 <div className="wc mx-auto">
                     <TitleDesc
                         sizeT={"28px"}

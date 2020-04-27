@@ -33,8 +33,11 @@ body,html,#root{
 
 .main-container{
   height: 100%;
-  overflow: hidden auto;
+  overflow: hidden;
+  overflow-y: auto;
   width: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 

@@ -16,8 +16,6 @@ import styled from "@emotion/styled";
 import {Element} from "react-scroll";
 import PricesTable from "./components/Prices";
 
-
-
 const Bigc = styled.div`
     background-image: url(img/Onda2.png);
     background-position:top center;
@@ -32,26 +30,17 @@ function App() {
 
 
   return (
-    <div className="main-container" id={"scroll"}>
+    <div className="main-container" id={"scroll-container"}>
         <Menu/>
-
         <S01/>
-        <div className={"wc"} name={"uno"}></div>
         <MenuFlotante/>
         <Section02/>
-
         <Bigc>
-        <Element name={"archivo"}/>
         <Section04/>
-
-
-        <Element name={"formulario"}/>
         <Section07/>
         </Bigc>
         <PricesTable/>
-        <div className={"wc"} name={"precios"}/>
         <Section09/>
-
         <Footer/>
     </div>
   );

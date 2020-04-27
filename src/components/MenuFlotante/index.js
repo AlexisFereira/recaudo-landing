@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import epa from "../../img/epayco-b.png";
-import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import {  animateScroll as scroll, scroller } from 'react-scroll'
 import Flex from "../Flex";
 
 
@@ -9,30 +9,27 @@ function MenuFlotante() {
     const [current,setCurrent] =useState("");
 
     const scrollTo = (target,offset = 0) => {
+
         scroller.scrollTo(target, {
             duration: 800,
             delay: 0,
-            smooth: 'easeInOutQuart',
-            containerId:"scroll",
+            smooth: 'easeInOutCubic',
+            containerId:"scroll-container",
             offset:offset
         })
     };
 
     let distancia = "";
-
     useEffect(()=>{
 
-        let caracteristicas    = document.getElementById("caracteristicas").offsetTop - 90;
+        let caracteristicas    = document.getElementById("caracteristicas").offsetTop - 91;
         let archivo            = document.getElementById("Archivo").offsetTop - 90;
         let formulario         = document.getElementById("formulario").offsetTop - 90;
         let creaCuenta         = document.getElementById("creaCuenta").offsetTop - 90;
-        let tabla              = document.getElementById("tabla").offsetTop - 90;
+        let tabla              = document.getElementById("tabla").offsetTop - 91;
 
-        document.getElementById("scroll").addEventListener("scroll",function () {
-
-            distancia = document.getElementById("scroll").scrollTop;
-            console.log(caracteristicas,archivo,formulario,creaCuenta)
-
+        document.getElementById("scroll-container").addEventListener("scroll",function () {
+            distancia = document.getElementById("scroll-container").scrollTop;
             if ((distancia > caracteristicas) && (distancia < archivo) ) { setCurrent("caracteristicas")}
             else if((distancia > archivo) && (distancia < formulario) ) { setCurrent("archivo")}
             else if((distancia > formulario) && (distancia < tabla) ) {setCurrent("formulario")}
@@ -55,17 +52,19 @@ function MenuFlotante() {
             <div className="enlaces f01 jcfe">
 
                 <button
-                    onClick={()=>  scrollTo("uno")}
+                    onClick={()=> {
+                        scrollTo("caracteristicas",-90)
+                    }}
                     id="btntwo"
                     className={`go07 ${current === "caracteristicas" && "active"}`}
+                    disabled={current === "caracteristicas"}
                 >
                     Características
                 </button>
                 <button
-                    onClick={()=> scrollTo("archivo",-60) }
+                    onClick={()=> scrollTo("archivoN",-60) }
                     id="archivo"
                     className={`go07 ${current === "archivo" && "active"}`}
-
                 >
                     Archivos de recaudo
                 </button>
@@ -77,11 +76,11 @@ function MenuFlotante() {
                     Formulario de recaudo
                 </button>
                 <button
-                    onClick={()=> scrollTo('precios') }
+                    onClick={()=> scrollTo('table',-30) }
                     id="btnFour"
                     className={`go07 ${current === "tabla" && "active"}`}
                 >
-                    Comparar caracteristicas
+                    Comparar características
                 </button>
                 <button
                     onClick={()=>  scrollTo('last')} id="btnfive" className="main"

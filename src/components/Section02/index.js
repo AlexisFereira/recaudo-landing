@@ -8,7 +8,12 @@ import {Colors} from "../Btn";
 
 function Section02() {
     return (
-        <div className={"wc position-relative pb-5"} id={"caracteristicas"}>
+        <div
+            className={"wc position-relative pb-5"}
+            style={{zIndex:"0"}}
+            id={"caracteristicas"}
+            name={"caracteristicas"}
+        >
             <div className="container py-4 py-lg-5">
                 <TitleDesc
                     text={"Principales características "}
@@ -51,6 +56,6 @@ function Section02() {
             </div>
         </div>
     )
-};
+}
 
 export default Section02;

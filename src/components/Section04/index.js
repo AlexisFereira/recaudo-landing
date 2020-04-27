@@ -10,11 +10,13 @@ import Section06 from "../Section06";
 const Container = styled.div`
     position-relative;
     with:100%;
+    z-index:0;
+    padding-top:100px;
 `;
 
 function Section04() {
     return (
-        <Container className={"py-5"} id={"Archivo"}>
+        <Container id={"Archivo"} name={"archivoN"}>
             <div className="col-12 col-md-8 col-lg-7 mx-auto pb-4">
                 <TitleDesc
                     sizeT={"28px"}
