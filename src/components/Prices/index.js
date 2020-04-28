@@ -19,6 +19,23 @@ const Container = styled.div`
     padding-top:100px;
 `;
 
+const TableShadow = styled.div`
+    box-shadow:0 3px 10px rgba(0,0,0,.3);
+    width:100%;
+    padding-bottom:15px;
+`;
+
+const ScrolllH = styled.div`
+    overflow:auto hidden;
+    flex:1 0 150px;
+    
+    .track{
+        min-width:840px;
+    }
+`;
+
+
+
 function PricesTable() {
 
     const [pirceType,setPrice] = useState("anual");
@@ -30,7 +47,7 @@ function PricesTable() {
                     <TitleDesc text={"Compare todas las características"}/>
                 </div>
 
-                <div className="tablaShadow">
+                <TableShadow>
                     <TabTable/>
                     <Flex alg={"flex-start"}>
                         <Flex flex={" 1 0 220px"} >
@@ -38,49 +55,51 @@ function PricesTable() {
                                 active={pirceType}
                                 onClick={ x => setPrice(x)}
                             />
-
                             <ListOfItems
                                 names={NamesF}
                             />
                         </Flex>
+                        <ScrolllH>
+                            <Flex className={"track"}>
+                                <Plan
+                                    name={"Gratis"}
+                                    price={"0"}
+                                    priceMonth={"0"}
+                                    description={"Para empresas que inician en la automatización y se preparan para un rápido crecimiento."}
+                                    featuresNames={NamesF}
+                                    features={gratis}
+                                />
+                                <Plan
+                                    name={"Básico"}
+                                    price={"69.900"}
+                                    priceMonth={"34.950"}
+                                    description={"Para empresas que inician en la automatización y se preparan para un rápido crecimiento."}
+                                    featuresNames={NamesF}
+                                    features={basico}
 
-                        <Plan
-                            name={"Gratis"}
-                            price={"0"}
-                            priceMonth={"0"}
-                            description={"Para empresas que inician en la automatización y se preparan para un rápido crecimiento."}
-                            featuresNames={NamesF}
-                            features={gratis}
-                        />
-                        <Plan
-                            name={"Básico"}
-                            price={"69.900"}
-                            priceMonth={"34.950"}
-                            description={"Para empresas que inician en la automatización y se preparan para un rápido crecimiento."}
-                            featuresNames={NamesF}
-                            features={basico}
+                                />
+                                <Plan
+                                    pro={true}
+                                    name={"Pro"}
+                                    price={"99.900"}
+                                    priceMonth={"49.950"}
+                                    description={"Para empresas que inician en la automatización y se preparan para un rápido crecimiento."}
+                                    featuresNames={NamesF}
+                                    features={pro}
 
-                        />
-                        <Plan
-                            pro={true}
-                            name={"Pro"}
-                            price={"99.900"}
-                            priceMonth={"49.950"}
-                            description={"Para empresas que inician en la automatización y se preparan para un rápido crecimiento."}
-                            featuresNames={NamesF}
-                            features={pro}
-
-                        />
-                        <Plan
-                            name={"Plus"}
-                            price={"169.900"}
-                            priceMonth={"84.950"}
-                            description={"Para empresas que inician en la automatización y se preparan para un rápido crecimiento."}
-                            featuresNames={NamesF}
-                            features={plus}
-                        />
+                                />
+                                <Plan
+                                    name={"Plus"}
+                                    price={"169.900"}
+                                    priceMonth={"84.950"}
+                                    description={"Para empresas que inician en la automatización y se preparan para un rápido crecimiento."}
+                                    featuresNames={NamesF}
+                                    features={plus}
+                                />
+                            </Flex>
+                        </ScrolllH>
                     </Flex>
-                </div>
+                </TableShadow>
             </div>
         </Container>
     )

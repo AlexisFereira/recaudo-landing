@@ -61,12 +61,10 @@ function S01() {
                 className="container px-lg-0"
             >
                     <div className="col-12 col-md-6 px-0 position-relative order-2 order-md-0">
-
-                        {/*<Monedas*/}
-                        {/*    left={"auto"}*/}
-                        {/*    right={"20%"}*/}
-                        {/*/>*/}
-
+                        <Monedas
+                            left={"auto"}
+                            right={"20%"}
+                        />
                         <img
                             src={ep} alt=""
                             height={"50px"}

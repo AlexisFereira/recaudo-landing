@@ -62,21 +62,21 @@ function MenuFlotante() {
                     Características
                 </button>
                 <button
-                    onClick={()=> scrollTo("archivoN",-60) }
+                    onClick={()=> scrollTo("archivoN",-20) }
                     id="archivo"
                     className={`go07 ${current === "archivo" && "active"}`}
                 >
                     Archivos de recaudo
                 </button>
                 <button
-                    onClick={()=> scrollTo('formulario', -60) }
+                    onClick={()=> scrollTo('formulario', -20) }
                     id="btnFour"
                     className={`go07 ${current === "formulario" && "active"}`}
                 >
                     Formulario de recaudo
                 </button>
                 <button
-                    onClick={()=> scrollTo('table',-30) }
+                    onClick={()=> scrollTo('table',-20) }
                     id="btnFour"
                     className={`go07 ${current === "tabla" && "active"}`}
                 >
