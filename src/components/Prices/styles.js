@@ -9,12 +9,19 @@ export const IconBool = styled.div`
         background:url(img/checkError.png);
         background-size:auto 200%;
         background-repeat:no-repeat;
+        margin:auto;
         background-position: 0 ${props => props.position};
 `;
 
 export const PlanS = styled.div`
        flex:${props => props.flex};
        background:white;
+       
+       @media all and (max-width:997px){
+       border-radius:4px;
+       margin:0 4px;
+        border:1px solid #cbcbcb;
+       }
 `;
 
 export const PricePlanS = styled(Flex)`
@@ -22,6 +29,10 @@ export const PricePlanS = styled(Flex)`
     width:210px;
     flex:${props => props.flex};
     padding: 25px 5px 20px;
+    position:sticky;
+    background:white;
+    top:0px;
+    
            
     .content{
         border:10px;
@@ -82,6 +93,7 @@ export const ItemDesc = styled(Flex)`
     min-height:${props => props.hg};
     width:100%;
     background:${props => props.type === "space" ? "#F7F7F7": "transparent"};
+ 
 `;
 
 export const DescItem= styled(Flex)`
@@ -100,7 +112,7 @@ export const DescItem= styled(Flex)`
 
 export const PlanSelectorCont = styled(Flex)`
     position:relative;
-    padding:25px 10px;
+    padding:10px;
     width:100%;
  
     .title{
@@ -133,6 +145,7 @@ export const PlanSelectorCont = styled(Flex)`
     
     button.active{
         color:white;
+        transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
     }
     
     .mancha{
@@ -149,7 +162,17 @@ export const PlanSelectorCont = styled(Flex)`
         min-height:274px;
         width: 270px;
         flex:1 0 260px;
+        padding:25px 10px;
     }
 `;
+
+export const DescriptionResponsive = styled.div`
+    text-decoration: ${props => props.dashed ? "line-through" :  "none"};
+    color:${props => props.dashed ? "#cbcbcb" :  "black"};
+    font-size: 14px;
+    line-height:1.4em;
+    max-width:200px;
+`;
+
 
 

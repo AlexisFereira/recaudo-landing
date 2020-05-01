@@ -155,7 +155,7 @@ function Menu() {
                         </div>
                     </li>
                 </ul>
-                <Flex className="menu02 f01">
+                <Flex className="menu02 f01" flex={"1 1 300px"}>
                     <a
                         href="https://epayco.co/contacto"
                         className="support"

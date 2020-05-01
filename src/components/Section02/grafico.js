@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "@emotion/styled";
-import barra from "./../../img/g01/barra.png";
 import direccion  from "./../../img/g01/direccion.png";
-import plantilla from "./../../img/g01/plantilla.png";
+import plantilla from "./../../img/g01/Plantilla1.png";
+import TabTable from "./../Prices/helper";
 
 let GraficoS = styled.div`   
    .barra,.direccion,.plantilla{
@@ -20,14 +20,13 @@ let GraficoS = styled.div`
 function Grafico() {
     return (
         <GraficoS className={"wc"}>
-            <div className="barra">
-                <img src={barra} alt="" className={"imgr"}/>
-            </div>
+            <TabTable/>
             <div className="direccion">
                 <img src={direccion} alt="" className={"imgr"}/>
             </div>
             <div className="plantilla">
                 <img src={plantilla} alt="" className={"imgr"}/>
+
             </div>
         </GraficoS>
     )

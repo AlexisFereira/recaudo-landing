@@ -44,7 +44,6 @@ const settings = {
     arrows: true,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />
-
 };
 
 const Slide = styled.div`

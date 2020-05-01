@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 import TabTable from "./helper";
 import {Plan,PlanSelectorTime,ListOfItems} from "./helper";
 import TitleDesc from "../titleDesc";
+import Slider from "react-slick";
 import Flex from "../Flex";
 import {
     gratis,
@@ -25,14 +26,50 @@ const TableShadow = styled.div`
     padding-bottom:15px;
 `;
 
-const ScrolllH = styled.div`
-    overflow:auto hidden;
-    flex:1 0 150px;
+const ContSlider = styled.div`
+    width:100%;
+    flex:7 0 250px;
     
-    .track{
-        min-width:840px;
+    .arrow{
+        position:absolute;
+        top:50%;
     }
 `;
+
+function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+        <div
+            className={"arrow right"}
+            onClick={onClick}
+        >
+            <i className="material-icons">keyboard_arrow_right</i>
+        </div>
+    );
+}
+
+function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+        <div
+            className={"arrow left"}
+            onClick={onClick}
+        >
+            <i className="material-icons">keyboard_arrow_left</i>
+        </div>
+    );
+}
+
+const settings = {
+    dots: true,
+    infinite: false,
+    speed: 300,
+    slidesToShow:1,
+    variableWidth: true,
+    // nextArrow: <SampleNextArrow />,
+    // prevArrow: <SamplePrevArrow />
+};
+
 
 
 
@@ -50,7 +87,13 @@ function PricesTable() {
                 <TableShadow>
                     <TabTable/>
                     <Flex alg={"flex-start"}>
-                        <Flex flex={" 1 0 220px"} >
+                        <div className={"wc pt-4 d-lg-none" }>
+                            <PlanSelectorTime
+                                active={pirceType}
+                                onClick={ x => setPrice(x)}
+                            />
+                        </div>
+                        <Flex flex={"0 0 250px"} className={"d-none d-lg-flex"} >
                             <PlanSelectorTime
                                 active={pirceType}
                                 onClick={ x => setPrice(x)}
@@ -59,8 +102,9 @@ function PricesTable() {
                                 names={NamesF}
                             />
                         </Flex>
-                        <ScrolllH>
-                            <Flex className={"track"}>
+
+                        <ContSlider className="wc d-xl-none" style={{flex:"1 0 250px",overflow:"hidden"}}>
+                            <Slider {...settings}>
                                 <Plan
                                     name={"Gratis"}
                                     price={"0"}
@@ -68,6 +112,8 @@ function PricesTable() {
                                     description={"Para empresas que inician en la automatización y se preparan para un rápido crecimiento."}
                                     featuresNames={NamesF}
                                     features={gratis}
+                                    priceType={pirceType}
+                                    flex={"1 0 220px"}
                                 />
                                 <Plan
                                     name={"Básico"}
@@ -76,6 +122,8 @@ function PricesTable() {
                                     description={"Para empresas que inician en la automatización y se preparan para un rápido crecimiento."}
                                     featuresNames={NamesF}
                                     features={basico}
+                                    priceType={pirceType}
+                                    flex={"1 0 220px"}
 
                                 />
                                 <Plan
@@ -86,6 +134,8 @@ function PricesTable() {
                                     description={"Para empresas que inician en la automatización y se preparan para un rápido crecimiento."}
                                     featuresNames={NamesF}
                                     features={pro}
+                                    priceType={pirceType}
+                                    flex={"1 0 220px"}
 
                                 />
                                 <Plan
@@ -95,9 +145,57 @@ function PricesTable() {
                                     description={"Para empresas que inician en la automatización y se preparan para un rápido crecimiento."}
                                     featuresNames={NamesF}
                                     features={plus}
+                                    priceType={pirceType}
+                                    flex={"1 0 220px"}
                                 />
-                            </Flex>
-                        </ScrolllH>
+                            </Slider>
+                        </ContSlider>
+                        <ContSlider className="wc d-none d-xl-flex " style={{flex:"1 0 250px",overflow:"hidden"}}>
+                            <Plan
+                                name={"Gratis"}
+                                price={"0"}
+                                priceMonth={"0"}
+                                description={"Para empresas que inician en la automatización y se preparan para un rápido crecimiento."}
+                                featuresNames={NamesF}
+                                features={gratis}
+                                priceType={pirceType}
+                                flex={"1 0 220px"}
+                            />
+                            <Plan
+                                name={"Básico"}
+                                price={"69.900"}
+                                priceMonth={"34.950"}
+                                description={"Para empresas que inician en la automatización y se preparan para un rápido crecimiento."}
+                                featuresNames={NamesF}
+                                features={basico}
+                                priceType={pirceType}
+                                flex={"1 0 220px"}
+
+                            />
+                            <Plan
+                                pro={true}
+                                name={"Pro"}
+                                price={"99.900"}
+                                priceMonth={"49.950"}
+                                description={"Para empresas que inician en la automatización y se preparan para un rápido crecimiento."}
+                                featuresNames={NamesF}
+                                features={pro}
+                                priceType={pirceType}
+                                flex={"1 0 220px"}
+
+                            />
+                            <Plan
+                                name={"Plus"}
+                                price={"169.900"}
+                                priceMonth={"84.950"}
+                                description={"Para empresas que inician en la automatización y se preparan para un rápido crecimiento."}
+                                featuresNames={NamesF}
+                                features={plus}
+                                priceType={pirceType}
+                                flex={"1 0 220px"}
+                            />
+                        </ContSlider>
+
                     </Flex>
                 </TableShadow>
             </div>

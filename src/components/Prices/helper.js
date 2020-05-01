@@ -7,13 +7,14 @@ import {
     PlanS,
     ItemDesc,
     DescItem,
-    PlanSelectorCont
+    PlanSelectorCont,
+    DescriptionResponsive
 } from "./styles";
 import 'react-tippy/dist/tippy.css'
 import {
     Tooltip,
 } from 'react-tippy';
-
+import {animated, config, useTransition} from "react-spring";
 
 
 const Container = styled(Flex)`
@@ -54,8 +55,53 @@ export const PricePlan = ({
                               price,
                               priceMonth,
                               className,
-                              pro
+                              pro,
+                              priceType = "mensual"
                           })=>{
+
+    const Transitions = useTransition(priceType , n=>n,{
+        config: config.stiff,
+        from:{
+            transform: priceType === "mensual" ? "translateY(-100%)" : "translateY(100%)",
+            opacity: 0
+        },
+        enter:{
+            transform: " translateY(0)",
+            opacity: 1
+        },
+        leave:{
+            position:"absolute",
+            transform: priceType  === "mensual" ? "translateY(100%)" : "translateY(-100%)",
+            opacity: 0
+        }
+    });
+
+    let sections = {
+        mensual : ({style})=>
+            <animated.div style={style} >
+                <div className="price">
+                    <p className={"mb-0"}><b>${price}</b><span className={"ml-1"}>COP/mes</span></p>
+                </div>
+                <div className="priceMonth">
+                    <div className="small">
+                        a ${priceMonth} con pago anual
+                    </div>
+                </div>
+            </animated.div>,
+        anual : ({style})=>
+            <animated.div style={style} >
+                <div className="priceMonth">
+                    <div className="small">
+                        a ${price} con pago mensual
+                    </div>
+                </div>
+                <div className="price wc text-center">
+                    <p className={"mb-0"}><b>${priceMonth}</b><span className={"ml-1"}>COP/mes</span></p>
+                </div>
+            </animated.div>,
+    };
+
+
     return(
         <PricePlanS className={className} selected={pro ? true : false}>
             <Flex className="content p-2" direction={"column"}>
@@ -67,16 +113,20 @@ export const PricePlan = ({
                 <div className="name">
                     {name}
                 </div>
-                <div className="price">
-                    <p className={"mb-0"}><b>${price}</b><span className={"ml-1"}>COP/mes</span></p>
-                </div>
-                {price!== "0" &&
-                <div className="priceMonth">
-                    <div className="small">
-                        a ${priceMonth} con pago anual
+
+                {priceMonth !== "0" ?
+                    (Transitions.map(({item,props,key})=>{
+                        let Valor =  sections[item]
+                        return <Valor style={props} key={key}/>
+                    }))
+                    :
+                    <div className="price">
+                        <p className={"mb-0"}><b>${price}</b><span className={"ml-1"}>COP/mes</span></p>
                     </div>
-                </div>
                 }
+
+
+
                 <div className="description text-center pt-3">
                     {description}
                 </div>
@@ -87,7 +137,7 @@ export const PricePlan = ({
 
 
 
-const FeatureItem = ({ type, value,hg = "50px",titleSpace })=>{
+const FeatureItem = ({ type, value,hg = "50px",titleSpace,description,onlyResponsive })=>{
 
     const types = {
         space: "",
@@ -103,12 +153,27 @@ const FeatureItem = ({ type, value,hg = "50px",titleSpace })=>{
             type={type}
             className={"col-12 p-1 text-center"}
         >
-            {types[type]}
-            {titleSpace &&
-                <div className={"wc text-left pl-3"}>
+            {!titleSpace &&
+            <DescriptionResponsive className={"d-lg-none wc text-left px-2"} dashed={type === "bool" ? !value : false}>
+                {description + " "}
+                {type === "text" && value}
+            </DescriptionResponsive>
+            }
+
+            { (titleSpace && onlyResponsive) &&
+                <div className={"p-2 title-responsive d-lg-none"} style={{maxWidth:"200px"}}>
                     <b>{titleSpace}</b>
                 </div>
             }
+
+            <div className="wc d-none d-lg-block text-center ">
+                {types[type]}
+                {(type === "space" && titleSpace && !onlyResponsive) &&
+                <div className={"wc text-left pl-3"}>
+                    <b>{titleSpace}</b>
+                </div>
+                }
+            </div>
         </ItemDesc>
     )
 };
@@ -147,18 +212,21 @@ export const Plan = ({
                          priceMonth,
                          features = [],
                          pro,
-                         featuresNames
+                         featuresNames,
+                         priceType,
+                        flex
                      })=>{
     return(
-        <PlanS>
+        <PlanS flex={flex}>
             <PricePlan
                 description={description}
                 name={name}
                 price={price}
                 priceMonth={priceMonth}
                 pro={pro}
+                priceType ={priceType }
             />
-            <FeatureItem type={"space"}/>
+            <FeatureItem onlyResponsive type={"space"} titleSpace={"Para todos los servicios "}/>
 
             {features.todos && features.todos.map((item,index)=>
                 <FeatureItem
@@ -167,10 +235,12 @@ export const Plan = ({
                     value ={item.value}
                     text  ={item.text}
                     hg    ={ featuresNames.todos[index].height + "px"}
+                    description ={featuresNames.todos[index].name}
+
                 />
             )}
 
-            <FeatureItem type={"space"}/>
+            <FeatureItem onlyResponsive type={"space"} titleSpace={"Para Archivo de recaudo"}/>
 
             {features.archivo && features.archivo.map((item,index)=>
                 <FeatureItem
@@ -179,10 +249,11 @@ export const Plan = ({
                     value ={item.value}
                     text  ={item.text}
                     hg    ={ featuresNames.archivo[index].height + "px"}
+                    description    ={ featuresNames.archivo[index].name}
                 />
             )}
 
-            <FeatureItem type={"space"}/>
+            <FeatureItem onlyResponsive type={"space"} titleSpace={"Para Formulario Web de Recaudo"}/>
 
             {features.web && features.web.map((item,index)=>
                 <FeatureItem
@@ -190,6 +261,7 @@ export const Plan = ({
                     type  ={item.type}
                     value ={item.value}
                     hg    ={ featuresNames.web[index].height + "px"}
+                    description = { featuresNames.web[index].name}
                 />
             )}
         </PlanS>

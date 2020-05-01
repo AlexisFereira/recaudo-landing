@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 // background: ${props => props.theme.background.box};
 export const Container = styled.div`
-  width: auto;
+  width: 100%;
   height: auto;
   display:flex;
   flex-flow: ${props => props.direction} wrap;

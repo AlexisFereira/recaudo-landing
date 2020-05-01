@@ -257,7 +257,7 @@ header {
     }
 
     .menu02{
-      flex:0 0 auto;
+      flex:1 0 300px;
       height:40px;
 
       .support{
@@ -459,6 +459,15 @@ header {
     transform: scale(1) translateY(100px) rotate(360deg);
     opacity: 0;
   }
+}
 
+@keyframes saluda {
+  0%{transform: rotate(20deg);}
+  100%{transform: rotate(30deg);}
+}
+
+@keyframes saluda2 {
+  0%{transform: rotate(-20deg);}
+  100%{transform: rotate(-30deg);}
 }
 

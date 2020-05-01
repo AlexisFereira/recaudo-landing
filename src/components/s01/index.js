@@ -7,6 +7,7 @@ import calc from "./../../img/Recaudo.png";
 import ep from "./../../img/epayco-b.png";
 import curva from "./../../img/curva01.png";
 import Monedas from "./monedas";
+import GraficoAnimado from "./grafico"
 
 
 let Grafico = styled.div`
@@ -44,9 +45,8 @@ let Contenedor = styled(Flex)`
     
     @media all and (max-width:768px){
         padding-top:80px;
-        background:none;
-        background-size: auto 100%;
-        background-position: left center;
+        background-size: auto 55%;
+        background-position: center top;
     }
     
 `;
@@ -58,13 +58,14 @@ function S01() {
             jc={ window.innerWidth > 766 ? "center" : "flex-start" }
         >
             <Flex
-                className="container px-lg-0"
+                className="container px-md-0"
+
             >
                     <div className="col-12 col-md-6 px-0 position-relative order-2 order-md-0">
-                        <Monedas
-                            left={"auto"}
-                            right={"20%"}
-                        />
+                        {/*<Monedas*/}
+                        {/*    left={"auto"}*/}
+                        {/*    right={"20%"}*/}
+                        {/*/>*/}
                         <img
                             src={ep} alt=""
                             height={"50px"}
@@ -82,7 +83,8 @@ function S01() {
                         </p>
                     </div>
                     <Grafico className="col-12 col-md-6 px-0 mb-4 mb-md-0" id={"g01"}>
-                        <img src={calc} alt="" className={"calculadora"}/>
+                        {/*<img src={calc} alt="" className={"calculadora"}/>*/}
+                        <GraficoAnimado/>
                         <img src={boy} alt=""   className={"chico"}/>
                     </Grafico>
             </Flex>

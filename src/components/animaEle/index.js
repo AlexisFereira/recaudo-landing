@@ -7,20 +7,25 @@ const Container = styled.div`
     top:${props => props.top};
     left:${props => props.left};
     bottom:${props => props.bottom};
-    top:${props => props.right};
+    right:${props => props.right};
     width:${props => props.width};
     transform-origin: ${props => props.origin};
+    z-index:${props => props.zI};
+    animation: ${props=> props.nameAnima} ${props => props.time} ease-in-out infinite alternate;
 `;
 
-function Animated({
+function AnimatedEle({
                       children,
-                      top    ="0",
-                      left   ="0",
-                      bottom ="auto",
-                      right  ="auto",
-                      width  ="100%",
+                      top    = "0",
+                      left   = "0",
+                      bottom = "auto",
+                      right  = "auto",
+                      width  = "100%",
                       origin = "0",
-                      className
+                      className,
+                      zI     = "1",
+                      time   = "3s",
+                      nameAnima ="saluda"
 }) {
     return (
         <Container
@@ -31,10 +36,13 @@ function Animated({
             right     = {right}
             width     = {width}
             origin    = {origin}
+            zI        = {zI}
+            time      = {time}
+            nameAnima = {nameAnima}
         >
             {children}
         </Container>
     )
 }
 
-export default React.memo(Animated);
+export default React.memo(AnimatedEle);
