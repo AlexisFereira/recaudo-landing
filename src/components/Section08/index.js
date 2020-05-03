@@ -10,7 +10,7 @@ function Section08() {
                 <div className="col-12 col-md-6 pl-md-0 order-2 order-md-0 px-0">
                     <Grafico/>
                 </div>
-                <div className="col-12 col-md-6 px-md-0 px-0">
+                <div className="col-12 col-md-6 px-md-0 px-0 pl-md-4 pl-xl-0">
                     <div className="wc m460 mx-0 mx-md-auto pb-4 pb-md-0">
                         <TitleDesc
                             colorT={Colors.naranja}
@@ -18,7 +18,8 @@ function Section08() {
                             className={"pb-3"}
                             direction={"left"}
                             text={"Proceso de pago"}
-                            description={"Al configurar y cargar en ePayco las facturas pendientes de pago, el usuario ingresa en la URL del proyecto y realiza el siguiente proceso para completar el pago:"}
+                            description={"" +
+                            "Al configurar el formulario y compartir la URL, el usuario completara el siguiente proceso para completar el pago."}
                         />
 
                         <ListItem
@@ -32,12 +33,12 @@ function Section08() {
                         />
 
                         <ListItem
-                            number={"3"}
+                            number={"-"}
                             text={"Realiza el pago."}
                         />
 
                         <ListItem
-                            number={"4"}
+                            number={"3"}
                             text={"Verifica el detalle de la transacción."}
                         />
 

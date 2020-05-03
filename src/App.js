@@ -31,17 +31,19 @@ function App() {
 
   return (
     <div className="main-container" id={"scroll-container"}>
-        <Menu/>
-        <S01/>
-        <MenuFlotante/>
-        <Section02/>
-        <Bigc>
-        <Section04/>
-        <Section07/>
-        </Bigc>
-        <PricesTable/>
-        <Section09/>
-        <Footer/>
+        <div className="wc fondo-formas">
+            <Menu/>
+            <S01/>
+            <MenuFlotante/>
+            <Section02/>
+            <Bigc>
+                <Section04/>
+                <Section07/>
+            </Bigc>
+            <PricesTable/>
+            <Section09/>
+            <Footer/>
+        </div>
     </div>
   );
 }

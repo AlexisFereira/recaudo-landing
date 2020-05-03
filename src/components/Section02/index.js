@@ -20,12 +20,12 @@ function Section02() {
                     description={"El servicio de recaudo cuenta con las siguientes opciones que le facilitan el cobro de facturas o recibir pagos:"}
                 />
             </div>
-            <Flex className={"container"}>
-                <div className="col-12 col-md-6 order-2 order-md-0 px-0">
+            <Flex className={"container px-md-0 pb-4"}>
+                <div className="col-12 col-md-6 order-2 order-md-0 px-0 ">
                     <Grafico/>
                 </div>
-                <div className="col-12 col-md-6 px-0">
-                    <div className="m460 mx-0 mx-md-auto pb-4 pb-md-0">
+                <div className="col-12 col-md-6 px-0 pl-md-4 pl-xl-0">
+                    <div className="m460 mx-0 ml-md-auto mr-md-0 pb-4 pb-md-0 ">
                         <TitleDesc
                             className={"pb-3"}
                             colorT={Colors.naranja}
@@ -51,9 +51,9 @@ function Section02() {
                 </div>
             </Flex>
 
-            <div className="container">
-                <Section03/>
-            </div>
+
+            <Section03/>
+
         </div>
     )
 }

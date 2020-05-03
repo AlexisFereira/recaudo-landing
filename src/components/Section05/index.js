@@ -4,6 +4,8 @@ import TitleDesc from "../titleDesc";
 import styled from "@emotion/styled";
 import iconos from "./../../img/Iconos.png"
 import {Colors} from "../Btn";
+import Grafico from "./grafico";
+import {scrollTo} from "../MenuFlotante";
 
 const Icon = styled.div`
     background:transparent url(${iconos}) no-repeat;
@@ -16,7 +18,7 @@ const Icon = styled.div`
 
 function Section05() {
     return (
-        <Flex className={"container px-md-0"} alg={"flex-start"}>
+        <Flex className={"container px-md-0 py-4"} >
             <Flex
                 className="col-12 col-md-7 px-0 pr-md-2 mb-3"
                 jc={"flex-start"}
@@ -84,9 +86,12 @@ function Section05() {
                         description={"Los usuarios pueden seleccionar más de una factura y realizar el pago de estas de forma agrupada y no una a una."}
                     />
                 </Flex>
+                <div className="wc p-2">
+                    <a onClick={()=> scrollTo('table',-20)}  style={{color:"#40A8E6"}}> <b>Ver todas las catacterísticas </b></a>
+                </div>
             </Flex>
             <Flex className={"col-12 col-md-5"} flex={"1 0 auto"}>
-
+                <Grafico/>
             </Flex>
         </Flex>
     )

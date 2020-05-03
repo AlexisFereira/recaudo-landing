@@ -3,21 +3,23 @@ import epa from "../../img/epayco-b.png";
 import {  animateScroll as scroll, scroller } from 'react-scroll'
 import Flex from "../Flex";
 
+export const scrollTo = (target,offset = 0) => {
+
+    scroller.scrollTo(target, {
+        duration: 800,
+        delay: 0,
+        smooth: 'easeInOutCubic',
+        containerId:"scroll-container",
+        offset:offset
+    })
+};
+
 
 function MenuFlotante() {
 
     const [current,setCurrent] =useState("");
 
-    const scrollTo = (target,offset = 0) => {
 
-        scroller.scrollTo(target, {
-            duration: 800,
-            delay: 0,
-            smooth: 'easeInOutCubic',
-            containerId:"scroll-container",
-            offset:offset
-        })
-    };
 
     let distancia = "";
     useEffect(()=>{

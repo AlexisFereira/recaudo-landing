@@ -11,7 +11,7 @@ function Section6() {
             <div className="col-12 col-md-6 pl-md-0 order-2 order-md-0 px-0">
                 <Grafico/>
             </div>
-            <div className="col-12 col-md-6 px-0">
+            <div className="col-12 col-md-6 px-0 pl-md-4 pl-xl-0">
                 <div className="wc m460 mx-0 mx-md-auto pb-4 pb-md-0">
                     <TitleDesc
                         direction={"left"}

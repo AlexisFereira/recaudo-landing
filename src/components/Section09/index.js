@@ -48,7 +48,7 @@ function Section09() {
                         </Flex>
                         <div className="col-12 col-md-6 text-center ">
                             <h2>Cree su primer proyecto de Recaudo</h2>
-                            <p>y comience a disfrutar nuestros servicios</p>
+                            <p>Y empiecé a recibir pagos al instante, ya sus clientes y usuarios no tendrán excusa para entrar en mora.</p>
 
                             <Flex className={"pt-4"} flex={"1 0 50%"}>
                                 <div className="col-12 col-sm-6 col-lg-6 mb-3 mb-sm-0 px-0 pr-sm-2">

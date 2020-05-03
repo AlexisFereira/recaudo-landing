@@ -6,7 +6,7 @@ import pasos from "./../../img/Pasos.png";
 import ListItem from "../ListItem";
 import Section05 from "../Section05";
 import Section06 from "../Section06";
-
+import Grafico from "./grafico";
 const Container = styled.div`
     position-relative;
     with:100%;
@@ -26,10 +26,10 @@ function Section04() {
             </div>
             <Flex className={"container px-lg-0 py-3"}>
                 <div className="col-12 col-md-6 pl-md-0 order-2 order-md-0 px-0 text-center text-md-left">
-                    <img src={pasos} alt="" width={"80%"} height={"auto"} className={"mx-auto mx-md-auto"}/>
+                    <Grafico/>
                 </div>
-                <div className="col-12 col-md-6 px-md-0 px-0">
-                    <div className="wc m460 mx-0 mx-md-auto pb-4 pb-md-0">
+                <div className="col-12 col-md-6 px-md-0 px-0 ">
+                    <div className="wc m460 mx-0 ml-md-auto mr-md-0 pb-4 pb-md-0">
                         <p>Con Recaudo a través de Archivo, no pierda ningún pago, cargue un archivo
                             en cualquier formato, defina que información verán y como consultaran sus obligaciones los
                             clientes, apropiado para el cobro de:

@@ -19,7 +19,7 @@ import {animated, config, useTransition} from "react-spring";
 
 const Container = styled(Flex)`
    position:relative;
-   height:40px;
+   height:${props => props.size};
    background:#D7D7D7;
    border-radius:6px 6px 0 0;
    width:100%;
@@ -36,9 +36,9 @@ const Container = styled(Flex)`
    .dot.red{background:#FF1515;}
 `;
 
-function TabTable() {
+function TabTable({size="40px",className="p-2 px-3"}) {
     return (
-        <Container jc={"flex-start"} className={"p-2 px-3"}>
+        <Container size={size} jc={"flex-start"} className={ className}>
             <div className="dot green"></div>
             <div className="dot yellow"></div>
             <div className="dot red"></div>
@@ -214,10 +214,11 @@ export const Plan = ({
                          pro,
                          featuresNames,
                          priceType,
-                        flex
+                        flex,
+                         className
                      })=>{
     return(
-        <PlanS flex={flex}>
+        <PlanS flex={flex} className={className}>
             <PricePlan
                 description={description}
                 name={name}

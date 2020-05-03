@@ -30,7 +30,7 @@ function Menu() {
             <div className="logo">
                 <img src="https://epayco.co/img/epayco_davi_color.png" alt=""/>
             </div>
-            <div className="icon-menu d-lg-none text-right">
+            <div className="icon-menu text-right">
                 <button id="showM" onClick={()=> setOpen(!open)}>
                     {open ?
                         <i className="material-icons closem dn">close</i>

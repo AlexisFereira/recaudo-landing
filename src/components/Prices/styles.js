@@ -31,7 +31,9 @@ export const PricePlanS = styled(Flex)`
     padding: 25px 5px 20px;
     position:sticky;
     background:white;
-    top:0px;
+    top:85px;
+    z-index:10;
+    border-bottom:1px solid #e4e4e4;
     
            
     .content{
@@ -111,9 +113,13 @@ export const DescItem= styled(Flex)`
 
 
 export const PlanSelectorCont = styled(Flex)`
-    position:relative;
+    position:sticky;
     padding:10px;
     width:100%;
+    top:85px;
+    z-index:3;
+    background:white;
+    border-bottom:1px solid #e4e4e4;
  
     .title{
         color:${Colors.azul};

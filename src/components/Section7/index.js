@@ -4,6 +4,7 @@ import Flex from "../Flex";
 import formu from "./../../img/formulario.png";
 import ListItem from "../ListItem";
 import Section08 from "../Section08";
+import Grafico from "./grafico";
 
 function Section07() {
     return (
@@ -31,11 +32,7 @@ function Section07() {
                     </div>
                 </div>
                 <div className="col-12 col-md-6 pl-md-0 px-0">
-                    <img src={formu}
-                         alt=""
-                         width={"100%"}
-                         height={"auto"}
-                    />
+                    <Grafico/>
                 </div>
 
                 <div className="container px-0">
