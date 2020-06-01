@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import Flex from "../Flex";
+import info from "./../../img/info-tool.png";
 import {
     PricePlanS,
     IconBool,
@@ -83,7 +84,7 @@ export const PricePlan = ({
                     <p className={"mb-0"}><b>${price}</b><span className={"ml-1"}>COP/mes</span></p>
                 </div>
                 <div className="priceMonth">
-                    <div className="small">
+                    <div className="small dashet">
                         a ${priceMonth} con pago anual
                     </div>
                 </div>
@@ -91,7 +92,7 @@ export const PricePlan = ({
         anual : ({style})=>
             <animated.div style={style} >
                 <div className="priceMonth">
-                    <div className="small">
+                    <div className="small dashet">
                         a ${price} con pago mensual
                     </div>
                 </div>
@@ -193,7 +194,7 @@ const DescriptionItem = ({text,tool})=>{
                     arrow={true}
                 >
                     <img
-                        src="/img/info-tool.png"
+                        src={info}
                         alt=""
                         height={"20px"}
                         width={"auto"}

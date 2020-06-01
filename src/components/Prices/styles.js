@@ -35,6 +35,9 @@ export const PricePlanS = styled(Flex)`
     z-index:10;
     border-bottom:1px solid #e4e4e4;
     
+     border:1p solid red;
+
+    
            
     .content{
         border:10px;
@@ -43,6 +46,11 @@ export const PricePlanS = styled(Flex)`
         background : ${props => props.selected ? "#FAFAFA" : "transparent"};
         min-height:230px;
         width: 200px;
+        
+        .priceMonth{
+         text-decoration:line-through
+        }
+        
         
         .label {
             position:absolute;
@@ -85,8 +93,10 @@ export const PricePlanS = styled(Flex)`
             color:#8C8C91;
             font-size:15px;
         }
-        
+       
     }
+    
+    
     
 ` ;
 

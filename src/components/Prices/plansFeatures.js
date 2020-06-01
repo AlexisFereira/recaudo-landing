@@ -296,7 +296,7 @@ export const basico = {
         {
 
             type:"text",
-            value: <b>1000/Mes <br/> 12.000/año</b>
+            value: <b>1.000/Mes <br/> 12.000/año</b>
         },
         {
             value:1,
@@ -385,9 +385,8 @@ export const pro = {
 
         },
         {
-            value:1,
+            value:3,
             type:"text",
-            text:"3"
         },
         {
             value:1,
@@ -419,7 +418,7 @@ export const pro = {
         {
 
             type:"text",
-            value: <b>300/Mes <br/> 36.000/año</b>
+            value: <b>3.000/Mes <br/> 36.000/año</b>
         },
         {
             value:1,

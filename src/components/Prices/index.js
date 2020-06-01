@@ -64,122 +64,6 @@ function PricesTable() {
                 </div>
 
                 <TableShadow>
-                    {/*<AnimatedEle*/}
-                    {/*    width={"20%"}*/}
-                    {/*    origin={"bottom center"}*/}
-                    {/*    top={"10%"}*/}
-                    {/*    left={"5px"}*/}
-                    {/*    time={"2s"}*/}
-                    {/*    nameAnima={"saluda2"}*/}
-                    {/*    height={"150px"}*/}
-                    {/*    zI={1}*/}
-                    {/*>*/}
-                    {/*    <Hojas  height={"100%"} icon={6} />*/}
-                    {/*</AnimatedEle>*/}
-                    {/*<AnimatedEle*/}
-                    {/*    width={"20%"}*/}
-                    {/*    origin={"bottom center"}*/}
-                    {/*    top={"10%"}*/}
-                    {/*    left={"5px"}*/}
-                    {/*    time={"1s"}*/}
-                    {/*    nameAnima={"saluda2"}*/}
-                    {/*    height={"50px"}*/}
-                    {/*    zI={1}*/}
-                    {/*>*/}
-                    {/*    <Hojas  height={"100%"} icon={2} />*/}
-                    {/*</AnimatedEle>*/}
-                    {/*<AnimatedEle*/}
-                    {/*    width={"20%"}*/}
-                    {/*    origin={"bottom center"}*/}
-                    {/*    top={"10%"}*/}
-                    {/*    left={"5px"}*/}
-                    {/*    time={"1.5s"}*/}
-                    {/*    nameAnima={"saluda2"}*/}
-                    {/*    height={"150px"}*/}
-                    {/*    zI={1}*/}
-                    {/*>*/}
-                    {/*    <Hojas  height={"100%"} icon={8} />*/}
-                    {/*</AnimatedEle>*/}
-
-
-                    {/*<AnimatedEle*/}
-                    {/*    width={"20%"}*/}
-                    {/*    origin={"bottom center"}*/}
-                    {/*    top={"50%"}*/}
-
-                    {/*    left={"auto"}*/}
-                    {/*    right={"5px"}*/}
-                    {/*    time={"2s"}*/}
-                    {/*    height={"150px"}*/}
-                    {/*    zI={1}*/}
-                    {/*>*/}
-                    {/*    <Hojas  height={"100%"} icon={3} />*/}
-                    {/*</AnimatedEle>*/}
-                    {/*<AnimatedEle*/}
-                    {/*    width={"20%"}*/}
-                    {/*    origin={"bottom center"}*/}
-                    {/*    top={"50%"}*/}
-
-                    {/*    left={"auto"}*/}
-                    {/*    right={"5px"}*/}
-                    {/*    time={"1s"}*/}
-                    {/*    height={"50px"}*/}
-                    {/*    zI={1}*/}
-                    {/*>*/}
-                    {/*    <Hojas  height={"100%"} icon={4} />*/}
-                    {/*</AnimatedEle>*/}
-                    {/*<AnimatedEle*/}
-                    {/*    width={"20%"}*/}
-                    {/*    origin={"bottom center"}*/}
-                    {/*    top={"50%"}*/}
-
-                    {/*    left={"auto"}*/}
-                    {/*    right={"5px"}*/}
-                    {/*    time={"1.5s"}*/}
-                    {/*    height={"150px"}*/}
-                    {/*    zI={1}*/}
-                    {/*>*/}
-                    {/*    <Hojas  height={"100%"} icon={7} />*/}
-                    {/*</AnimatedEle>*/}
-
-
-                    {/*<AnimatedEle*/}
-                    {/*    width={"20%"}*/}
-                    {/*    origin={"bottom center"}*/}
-                    {/*    top={"90%"}*/}
-                    {/*    left={"5px"}*/}
-                    {/*    time={"2s"}*/}
-                    {/*    nameAnima={"saluda2"}*/}
-                    {/*    height={"150px"}*/}
-                    {/*    zI={1}*/}
-                    {/*>*/}
-                    {/*    <Hojas  height={"100%"} icon={7} />*/}
-                    {/*</AnimatedEle>*/}
-                    {/*<AnimatedEle*/}
-                    {/*    width={"20%"}*/}
-                    {/*    origin={"bottom center"}*/}
-                    {/*    top={"90%"}*/}
-                    {/*    left={"5px"}*/}
-                    {/*    time={"1s"}*/}
-                    {/*    nameAnima={"saluda2"}*/}
-                    {/*    height={"50px"}*/}
-                    {/*    zI={1}*/}
-                    {/*>*/}
-                    {/*    <Hojas  height={"100%"} icon={6} />*/}
-                    {/*</AnimatedEle>*/}
-                    {/*<AnimatedEle*/}
-                    {/*    width={"20%"}*/}
-                    {/*    origin={"bottom center"}*/}
-                    {/*    top={"90%"}*/}
-                    {/*    left={"5px"}*/}
-                    {/*    time={"1.5s"}*/}
-                    {/*    nameAnima={"saluda2"}*/}
-                    {/*    height={"150px"}*/}
-                    {/*    zI={1}*/}
-                    {/*>*/}
-                    {/*    <Hojas  height={"100%"} icon={5} />*/}
-                    {/*</AnimatedEle>*/}
-
 
                     <TabTable/>
                     <Flex alg={"flex-start"} className={"position-relative"} style={{zIndex:"10"}}>
@@ -205,17 +89,17 @@ function PricesTable() {
                                     name={"Gratis"}
                                     price={"0"}
                                     priceMonth={"0"}
-                                    description={"Para empresas que inician en la automatización y se preparan para un rápido crecimiento."}
+                                    description={"Las funcionalidades escenciales para empezar a recibir pagos o recaudar a través de internet."}
                                     featuresNames={NamesF}
                                     features={gratis}
                                     priceType={pirceType}
                                     flex={"1 0 220px"}
                                 />
                                 <Plan
-                                    name={"Básico"}
+                                    name={"Plus"}
                                     price={"69.900"}
-                                    priceMonth={"34.950"}
-                                    description={"Para empresas que inician en la automatización y se preparan para un rápido crecimiento."}
+                                    priceMonth={"34.900"}
+                                    description={"Funcionalidades adicionales para recibir pagos o recaudar a través de internet."}
                                     featuresNames={NamesF}
                                     features={basico}
                                     priceType={pirceType}
@@ -224,21 +108,20 @@ function PricesTable() {
                                 />
                                 <Plan
                                     pro={true}
-                                    name={"Pro"}
+                                    name={"Ultra"}
                                     price={"99.900"}
                                     priceMonth={"49.950"}
-                                    description={"Para empresas que inician en la automatización y se preparan para un rápido crecimiento."}
+                                    description={"Cuandos e requiere ir más allá al recibir pagos o recaudar a través de internet."}
                                     featuresNames={NamesF}
                                     features={pro}
                                     priceType={pirceType}
                                     flex={"1 0 220px"}
-
                                 />
                                 <Plan
-                                    name={"Plus"}
+                                    name={"Pro"}
                                     price={"169.900"}
                                     priceMonth={"84.950"}
-                                    description={"Para empresas que inician en la automatización y se preparan para un rápido crecimiento."}
+                                    description={"La más completa solución de recaudo sin límites, le ayudará a llegar al siguiente nivel."}
                                     featuresNames={NamesF}
                                     features={plus}
                                     priceType={pirceType}
@@ -250,7 +133,7 @@ function PricesTable() {
                             name={"Gratis"}
                             price={"0"}
                             priceMonth={"0"}
-                            description={"Para empresas que inician en la automatización y se preparan para un rápido crecimiento."}
+                            description={"Las funcionalidades escenciales para empezar a recibir pagos o recaudar a través de internet."}
                             featuresNames={NamesF}
                             features={gratis}
                             priceType={pirceType}
@@ -258,10 +141,10 @@ function PricesTable() {
                             className={"d-none d-xl-block"}
                         />
                         <Plan
-                            name={"Básico"}
+                            name={"Plus"}
                             price={"69.900"}
-                            priceMonth={"34.950"}
-                            description={"Para empresas que inician en la automatización y se preparan para un rápido crecimiento."}
+                            priceMonth={"34.900"}
+                            description={"Funcionalidades adicionales para recibir pagos o recaudar a través de internet."}
                             featuresNames={NamesF}
                             features={basico}
                             priceType={pirceType}
@@ -270,10 +153,10 @@ function PricesTable() {
                         />
                         <Plan
                             pro={true}
-                            name={"Pro"}
+                            name={"Ultra"}
                             price={"99.900"}
                             priceMonth={"49.950"}
-                            description={"Para empresas que inician en la automatización y se preparan para un rápido crecimiento."}
+                            description={"Cuandos e requiere ir más allá al recibir pagos o recaudar a través de internet."}
                             featuresNames={NamesF}
                             features={pro}
                             priceType={pirceType}
@@ -281,24 +164,17 @@ function PricesTable() {
                             className={"d-none d-xl-block"}
                         />
                         <Plan
-                            name={"Plus"}
+                            name={"Pro"}
                             price={"169.900"}
                             priceMonth={"84.950"}
-                            description={"Para empresas que inician en la automatización y se preparan para un rápido crecimiento."}
+                            description={"La más completa solución de recaudo sin límites, le ayudará a llegar al siguiente nivel."}
                             featuresNames={NamesF}
                             features={plus}
                             priceType={pirceType}
                             flex={"1 0 200px"}
                             className={"d-none d-xl-block"}
                         />
-
-
                     </Flex>
-
-
-
-
-
 
                 </TableShadow>
             </div>
